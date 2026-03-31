@@ -1,31 +1,51 @@
-# vue-tailwind-admin
-A simple admin template built using [TailwindCSS](https://tailwindcss.com) & [Vue.js](https://vuejs.org). This project is also running [Vuex](https://vuex.vuejs.org) in order to control the sidebar state throughout components.
+# FlexiCare Mobile Web
 
-## Live Demo
-[https://angry-mahavira-9b32ec.netlify.com/](https://angry-mahavira-9b32ec.netlify.com/)
+Frontend Vue 3 + Tailwind CSS pour la plateforme FlexiCare, avec deux parcours:
 
-## Screenshot
-![alt text](https://camo.githubusercontent.com/cfc9183fa58b5017902e7c8878d4b0ce35bfd0fb/68747470733a2f2f692e6779617a6f2e636f6d2f63373433643165366262653663653762633265646264363635353663343931302e706e67)
+- Prestataire
+- Client
 
-## Project setup
-```
+## Stack
+
+- Vue 3
+- Vue Router 4
+- Pinia
+- Axios
+- Tailwind CSS
+- Heroicons
+
+## Démarrage
+
+```bash
 npm install
+npm run dev
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Build
 
-### Compiles and minifies for production
-```
+```bash
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Architecture
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- `src/layouts/ProviderLayout.vue`
+- `src/layouts/ClientLayout.vue`
+- `src/pages/provider/*`
+- `src/pages/client/*`
+- `src/components/*`
+- `src/stores/*`
+- `src/services/*`
+
+## API branchée
+
+- `GET /api/provider/missions`
+- `POST /api/missions/{id}/start`
+- `POST /api/missions/{id}/complete`
+- `POST /api/provider/status`
+- `POST /api/missions`
+- `POST /api/reviews`
+
+## Matching contract
+
+See [docs/api-matching-contract.md](./docs/api-matching-contract.md) for the full mission matching flow, candidate ranking, tracking, and provider availability contract.
